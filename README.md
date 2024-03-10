@@ -1,6 +1,6 @@
 # ion-electron-react-template
 ```sh
-npx Garruxx/ion-electron-react-template my-ion-app
+npx degit Garruxx/ion-electron-react-template my-ion-app
 ```
 
 ```sh
