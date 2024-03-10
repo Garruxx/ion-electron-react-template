@@ -1,0 +1,54 @@
+{
+	"name": "nombre",
+	"productName": "",
+	"version": "1.0.0",
+	"description": "",
+	"main": "App",
+	"private": true,
+	"scripts": {
+		"dev": "vite --port 80",
+		"cpy:assets": "cpy web/**/* !**/*.ts* !**/*.sass !**/*.css !**/*.scss App",
+		"build": "tsc && vite build && pnpm cpy:assets && electron-builder",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix"
+	},
+	"keywords": [],
+	"build": {
+		"productName": "nombre",
+		"appId": "com.garrux.chispas",
+		"icon": "icon.png",
+		"asar": true,
+		"mac": {
+			"icon": "icon.png"
+		},
+		"win": {
+			"target": "nsis",
+			"icon": "icon.ico"
+		},
+		"linux": {
+			"icon": "icon.png"
+		}
+	},
+	"author": "Jhon Jairo Guerrero Sanchez",
+	"devDependencies": {
+		"@types/react": "^18.2.64",
+		"@types/react-dom": "^18.2.21",
+		"@typescript-eslint/eslint-plugin": "^7.1.1",
+		"@typescript-eslint/parser": "^7.1.1",
+		"@vitejs/plugin-react-swc": "^3.6.0",
+		"cpy": "^11.0.0",
+		"electron": "^29.1.1",
+		"electron-builder": "^24.13.3",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.3",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.5",
+		"prettier": "^3.2.5",
+		"vite": "^5.1.5",
+		"vite-plugin-electron": "^0.28.2"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}
